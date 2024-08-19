@@ -1,0 +1,11 @@
+/* Header.css */
+.dropdown-menu-right {
+    right: 0; /* Ensure the dropdown menu aligns to the right */
+    left: auto; /* Prevents dropdown from expanding to the left */
+    margin: 0; /* Removes any default margin */
+  }
+  
+  .dropdown-menu {
+    max-width: 200px; /* Optional: Set a max-width if needed */
+  }
+  
