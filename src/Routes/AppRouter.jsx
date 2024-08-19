@@ -5,8 +5,10 @@ import { SignupForm } from '../Pages/SignupPage/SignupForm';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import FullLayout from '../Pages/MainPage';
-import MainWindow from '../Pages/FullLayout';
 import ChatComponent from '../components/ChatWindow';
+import { NotePage } from '../Pages/NotePage';
+// import DatabaseListPage from '../Pages/DatabaseListPage';
+import DatabaseListPage from '../Pages/db';
 
 function AppRouter() {
   return (
@@ -14,10 +16,9 @@ function AppRouter() {
       <Routes>
         <Route path="/login" element={<LoginForm />} />
         <Route path="/signup" element={<SignupForm />} />
-        <Route path="/head" element={<Header />} />
-        <Route path="/side" element={<Sidebar />} />
-        <Route path="/full" element={<FullLayout />} />
-        <Route path="/a" element={<ChatComponent />} />
+        <Route path="/homepage" element={<FullLayout />} />
+        <Route path="/notes" element={<NotePage />} />
+        <Route path="/databases" element={<DatabaseListPage />} />
       </Routes>
     </Router>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaUser, FaLock, FaEnvelope } from "react-icons/fa";
-import "../../assets/css/RegistrationForm.css"
+import "../../assets/css/RegistrationForm.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const SignupForm = () => {
@@ -31,53 +31,55 @@ export const SignupForm = () => {
   };
 
   return (
-    <div className="wrapper">
-      <form onSubmit={handleSubmit}>
-        <h1>Signup</h1>
-        <div className="input-box">
-          <input 
-            type="text" 
-            placeholder="Username" 
-            value={username} 
-            onChange={(e) => setUsername(e.target.value)} 
-          />
-          <FaUser className='icon'/>
-        </div>
-        <div className="input-box">
-          <input 
-            type="email" 
-            placeholder="Email" 
-            value={email} 
-            onChange={(e) => setEmail(e.target.value)} 
-          />
-          <FaEnvelope className='icon'/>
-        </div>
-        <div className="input-box">
-          <input 
-            type="password" 
-            placeholder="Password" 
-            value={password} 
-            onChange={(e) => setPassword(e.target.value)} 
-          />
-          <FaLock className='icon'/>
-        </div>
-        <div className="input-box">
-          <input 
-            type="password" 
-            placeholder="Confirm Password" 
-            value={confirmPassword} 
-            onChange={(e) => setConfirmPassword(e.target.value)} 
-          />
-          <FaLock className='icon'/>
-        </div>       
-        {error && <div className="error-message pt-3 text-center">{error}</div>}
-        <div className="my-4">
-            <button type="submit">Signup</button>
-        </div>
-        <div className="register-link">
-          <p>Already have an account? <a href="/login">Login</a></p>    
-        </div> 
-      </form>
+    <div className="container d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
+      <div className="wrapper">
+        <form onSubmit={handleSubmit}>
+          <h1 className="text-center">Signup</h1>
+          <div className="input-box">
+            <input 
+              type="text" 
+              placeholder="Username" 
+              value={username} 
+              onChange={(e) => setUsername(e.target.value)} 
+            />
+            <FaUser className='icon'/>
+          </div>
+          <div className="input-box">
+            <input 
+              type="email" 
+              placeholder="Email" 
+              value={email} 
+              onChange={(e) => setEmail(e.target.value)} 
+            />
+            <FaEnvelope className='icon'/>
+          </div>
+          <div className="input-box">
+            <input 
+              type="password" 
+              placeholder="Password" 
+              value={password} 
+              onChange={(e) => setPassword(e.target.value)} 
+            />
+            <FaLock className='icon'/>
+          </div>
+          <div className="input-box">
+            <input 
+              type="password" 
+              placeholder="Confirm Password" 
+              value={confirmPassword} 
+              onChange={(e) => setConfirmPassword(e.target.value)} 
+            />
+            <FaLock className='icon'/>
+          </div>       
+          {error && <div className="error-message pt-3 text-center">{error}</div>}
+          <div className="my-4">
+            <button type="submit" className="btn btn-primary w-100">Signup</button>
+          </div>
+          <div className="register-link text-center">
+            <p>Already have an account? <a href="/login">Login</a></p>    
+          </div> 
+        </form>
+      </div>
     </div>
   );
 };
