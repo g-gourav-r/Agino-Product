@@ -10,7 +10,7 @@ app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
 // Replace this with your actual MongoDB connection string
-const mongoURI = 'mongodb+srv://pranayraut17:biKM8FqV39f5V2cK@cluster0.cywhhsf.mongodb.net/Primus?retryWrites=true&w=majority&appName=Cluster0';
+const mongoURI = 'ds';
 
 mongoose.connect(mongoURI, {
   useNewUrlParser: true,
